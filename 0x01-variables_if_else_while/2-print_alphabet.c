@@ -5,7 +5,6 @@
  *
  * Return: Always 0 (Sucess)
  */
-
 int main(void)
 {
 	char alp[26] = "abcdefghijklmnopqrstuvwxyz";
