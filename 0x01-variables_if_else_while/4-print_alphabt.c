@@ -1,6 +1,6 @@
-#include <stdlib.h>
-#include <time.h> 
 #include <stdio.h>
+#include <stdlip.h> 
+#include <string.h>
 
 /**
  * main - Enter the alphabet without q and e.
