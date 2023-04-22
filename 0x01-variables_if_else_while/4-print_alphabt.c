@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h> 
 #include <string.h>
-
 /**
  * main - Enter the alphabet without q and e.
  *
@@ -19,5 +18,5 @@ int main(void)
 		}
 	}
 	putchar('\n');
-        return (0);
+	return (0);
 }
