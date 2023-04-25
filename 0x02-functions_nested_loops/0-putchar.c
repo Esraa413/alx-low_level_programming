@@ -4,9 +4,9 @@
  */
 int main(void)
 {
-	putchar('_');	
-	putchar('p');
-	putchar('u');
+	_putchar('_');	
+	_putchar('p');
+	_putchar('u');
 
 	
 	putchar('\n');
