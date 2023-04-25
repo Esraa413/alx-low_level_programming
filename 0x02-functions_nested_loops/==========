@@ -1,0 +1,6 @@
+lphabet.c:10: WARNING: Missing a blank line after declarations
+1-alphabet.c:10: ERROR: space required before the open parenthesis '('
+total: 1 errors, 1 warnings, 13 lines checked
+1-alphabet.c:7: warning: no description found for function print_alphabet
+print_alphabet
+root@050a706b3fb4:~/alx-low_level_programming/0x02-functions_nested_loops# vi 
