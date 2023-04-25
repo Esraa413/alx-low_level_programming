@@ -1,16 +1,16 @@
-#include "main.h" 
-
+#include "main.h"
 /**
  * main - print _putchar
+ *
+ * Return: 0
  */
+
 int main(void)
 {
-        _putchar('_');
-        _putchar('p');
-        _putchar('u');
+	_putchar('p');
+	_putchar('u');
+	_putchar('k');
+	_putchar('\n');
 
-
-        _putchar('\n');
-
-        return (0);
+	return (0);
 }
