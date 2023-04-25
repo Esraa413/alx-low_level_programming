@@ -9,6 +9,7 @@ int main(void)
 	_putchar('u');
 
 	
-	putchar('\n');
+	_putchar('\n');
+
 	return (0);
 }
