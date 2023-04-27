@@ -18,8 +18,8 @@ void print_diagonal(int n)
 		{
 			for (space = 1; space <= space; space++)
 				_putchar(' ');
-			_putcher(92); /*is equal to '/' char*/
-			_putcher('/n')
+			_putchar(92); /*is equal to '/' char*/
+			_putchar('/n')
 		}
 	}
 }
