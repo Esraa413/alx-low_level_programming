@@ -2,7 +2,7 @@
 
 /**
  * puts_half - a function that prints half of a string, followed by a new line
- * *str: array string type
+ * @str: array string type
  * discraption: is odd the function should print the last length string - 1 / 2
  */
 
