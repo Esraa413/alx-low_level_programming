@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_rev -in reverse, followed by a new line
+ * print_rev - printrs reverse, followed by a new line
  * @@s: string
  * return: (0)
  */
