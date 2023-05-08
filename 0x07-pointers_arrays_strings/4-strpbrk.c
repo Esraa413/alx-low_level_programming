@@ -11,13 +11,13 @@ include "main.h"
 
 char *_strpbrk(char *s, char *accept)
 {
-	int x;
+	int k;
 
 	while (*s)
 	{
-		for (x = 0; accept[x]; x++)
+		for (k = 0; accept[k]; k++)
 		{
-			if (*s == accept[x])
+			if (*s == accept[k])
 			return (s);
 		}
 		s++;
