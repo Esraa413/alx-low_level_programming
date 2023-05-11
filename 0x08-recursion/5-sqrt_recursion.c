@@ -6,6 +6,7 @@
  * @n : calculate the square
  * Return: Always 0
  */
+
 int natural_square(int n, int x)
 int _sqrt_recursion(int n)
 {
@@ -30,6 +31,6 @@ int natural_square(int n, int x)
 	else if (x * x == n)
 	{
 		return (x);
+		return (natural_square(n, x + 1));
 	}
-	return (natural_square(n, i + 1));
 }
