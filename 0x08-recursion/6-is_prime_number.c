@@ -32,5 +32,5 @@ int prime(int n, int x)
 		return (0);
 	}
 	else
-		return (prime(n, x = 1));
+		return (prime(n, x + 1));
 }
