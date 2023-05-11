@@ -21,7 +21,7 @@ int is_prime_number(int n)
  * Return: Always 0
  */
 
-int actual_prime(int n, int x)
+int prime(int n, int x)
 {
 	if (x >= n && n > 1)
 	{
