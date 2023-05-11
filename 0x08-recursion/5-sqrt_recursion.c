@@ -5,6 +5,7 @@
 /**
  * _sqrt_recursion - returns the natural square root of a number
  * @n : calculate the square
+ * @i : square root
  * Return: Always 0
  */
 
