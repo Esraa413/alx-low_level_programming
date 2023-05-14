@@ -2,9 +2,9 @@
 
  /**
  * _strcat - concatenates two strings
- * @dest: input value
- * @src: input value
- * Return: void
+ * @dest : input value
+ * @src : input value
+ * Return: Return: Always 0
  */
 
 char *_strcat(char *dest, char *src)
