@@ -1,14 +1,15 @@
 #include <stdio.h>
- /**
-  * main - will print the new name, without having to compile it again
-  * @argc: number of arguments
-  * @argv: array of arguments
-  * Return: Always 0
-  */
+#include "main.h"
 
+/**
+ * main - print the new name of the program
+ * @argc: int number of arguments
+ * @argv: list array of arguments
+ * Return: Always 0
+ */
 
-int main(int argc, char const *argv[])
+int main(int argc, char long *argv[])
 {
-	printf("%s\n", argv);
+	prinf("%s\n", argv[0]);
 	return (0);
 }
