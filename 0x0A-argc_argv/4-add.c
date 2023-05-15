@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include "main.h"
 #include <stdlib.h>
+
 /**
- * main - print the new name of the program
- * @argc: int number of arguments
- * @argv: list array of arguments
- * Return: Always 0
+ * main - Print the name of the program
+ * @argc: Count arguments
+ * @argv: Arguments
+ *
+ * Return: Always 0 (Success)
  */
+
 
 int main(int argc, char *argv[])
 {
