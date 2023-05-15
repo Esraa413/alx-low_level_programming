@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
 	while (x < argc)
 	{
-		if argv[x]
+		if (argv[x])
 		{
 			y = atoi(argv[x]);
 			sum += y;
