@@ -18,8 +18,8 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	x1 = _atoi(argv[1]);
-	x2 = _atoi(argv[2]);
+	x1 = atoi(argv[1]);
+	x2 = atoi(argv[2]);
 	sum = x1 * x2;
 
 	printf("%d\n", sum);
