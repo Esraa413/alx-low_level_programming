@@ -10,20 +10,21 @@
  * Return: Always 0 (Success)
  */
 
-
 int main(int argc, char *argv[])
 {
 	int x = 1;
-	int y;
+	int x;
 	int sum = 0;
 
 	while (x < argc)
 	{
-		if (argv[x])
+		if (check_num(argv[x]))
+
 		{
 			y = atoi(argv[x]);
 			sum += y;
 		}
+
 		else
 		{
 			printf("Error\n");
