@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "main.h"
 #include <stdlib.h>
-
 /**
  * main - print the new name of the program
  * @argc: int number of arguments
@@ -18,7 +17,7 @@ int main(int argc, char *argv[])
 	x = 1;
 	while (x < argc)
 	{
-		if (argv[x])
+		if ((argv[x]))
 		{
 			y = atoi(argv[x]);
 			sum += y;
