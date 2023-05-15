@@ -12,29 +12,17 @@
 
 int main(int argc, char *argv[])
 {
-	int x = 1;
-	int y;
 	int sum = 0;
+	char *c;
 
-	while (x < argc)
+	while (--argc)
 	{
-		if (check_num(argv[x]))
-
-		{
-			y = atoi(argv[x]);
-			sum += y;
-		}
-
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
-
-		x++;
+		for (c = argv[argc]; *c; c++)
+			if (*c < '0' || *c > '9')
+				printf ("Error\n");
+		return (1);
+		sum += atoi (argv[argc]);
 	}
-
 	printf("%d\n", sum);
-
 	return (0);
 }
