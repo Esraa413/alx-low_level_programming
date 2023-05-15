@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 
 	while (x < argc)
 	{
-		if ((argv[x]))
+		if (check_num(argv[x]))
 
 		{
 			y = atoi(argv[x]);
