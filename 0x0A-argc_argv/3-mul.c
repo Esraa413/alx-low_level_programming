@@ -10,19 +10,17 @@
 
 int main(int argc, char *argv[])
 {
-	int sum, x1, x2;
-	
-	if (argc < 3 || argc > 3)
+	int sum;
+
+	if (argc == 3)
+	{
+		sum = atoi(argv[1]) * atoi(argv[2]);
+		printf("%d\n");
+	}
+	else
 	{
 		printf("Error\n");
 		return (1);
 	}
-
-	x1 = atoi(argv[1]);
-	x2 = atoi(argv[2]);
-	sum = x1 * x2;
-
-	printf("%d\n", sum);
-
 	return (0);
 }
