@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid -  that returns a pointer to a 2 dimensional array of integers
+ * alloc_grid - that returns a pointer to a 2 dimensional array of integers
  * @width: width input
  * @height: height input
  * Return: Always 0
@@ -19,7 +19,7 @@ int **alloc_grid(int width, int height)
 		return (0);
 	}
 	mm = malloc(sizeof(int *) * height);
-	if (mee == 0)
+	if (mm == 0)
 	{
 		return (0);
 	}
