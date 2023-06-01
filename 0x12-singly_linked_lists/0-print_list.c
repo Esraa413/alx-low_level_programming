@@ -5,7 +5,7 @@
 
 /**
  * print_list - function that prints all the elements of a list
- * @h: pointer pointer to the list
+ * @h: pointer to the list
  *
  * Return: the number of nodes
  */
