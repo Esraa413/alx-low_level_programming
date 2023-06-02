@@ -25,7 +25,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		else
 			printf("%c", str);
 		if (sum != (n - 1) && separator != NULL)
-			printf("%c", separator);
+			printf("%s", separator);
 	}
 
 	printf("\n");
