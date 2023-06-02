@@ -3,27 +3,6 @@
 #include <stdio.h>
 #include "lists.h"
 
-/**
- * _strlan - function calculates the length of a given string
- * @s: string length to check
- *
- * Return: the number of nodes
- */
-
-int _strlen(char *s)
-{
-	int x = 0;
-
-	if (!s)
-		return (0);
-
-	while (*s++)
-		x++;
-
-	return (x);
-}
-
-
 
 /**
  * print_list - function that prints all the elements of a list
@@ -34,7 +13,7 @@ int _strlen(char *s)
 
 size_t print_list(const list_t *h)
 {
-	size_t x = 0;
+	size_t s = 0;
 
 	while (h)
 	{
@@ -44,7 +23,7 @@ size_t print_list(const list_t *h)
 		else
 			printf(" %d %s\n ", h->len, h->str);
 		h = h->next;
-		x++;
+		s++;
 	}
-	return (x);
+	return (s);
 }
