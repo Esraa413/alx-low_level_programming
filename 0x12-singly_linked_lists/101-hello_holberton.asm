@@ -7,4 +7,4 @@ main:
 	mov	eax, 0
 	ret
 
-msg: db 'Hello, Holberton\n',0
+msg: db 'Hello, Holberton\n',0xa ,0
