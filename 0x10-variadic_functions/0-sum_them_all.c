@@ -11,7 +11,7 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list ap;
-	int num, sum;
+	unsigned int num, sum;
 
 	sum = 0;
 
