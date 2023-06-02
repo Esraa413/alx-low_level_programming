@@ -12,7 +12,7 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list ap;
-	int num;
+	unsigned int num;
 
 	va_start(ap, n);
 	for (num = 0; num < n; num++)
