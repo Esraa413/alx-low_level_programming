@@ -2,9 +2,9 @@
 
 /**
  * print_numbers - function that prints numbers, followed by a new line
+ *@separator: The string to be printed
  * @n: The number of integers
  * @...: A variable number
- * @separator: The string to be printed
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
