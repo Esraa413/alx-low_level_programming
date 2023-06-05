@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * free_listint2 -  function that frees a listint
+ * free_listint -  function that frees a listint
  * @head: pointer to the first node
  * Return: Always 0
  */
