@@ -5,25 +5,26 @@
 
 /**
  * insert_nodeint_at_index - function that inserts a new node,
- *  at a given position
- *  @head: pointer to the first node
- *  @n: data to insert
- *  @idx: index where the new node
- *  Returns: the address and NULL
+ * at a given position
+ * @head: pointer to the first node
+ * @n: data to insert
+ * @idx: index where the new node
+ * Returns: the address and NULL if it failed
  */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *node = malloc(sizeof(listint_t));
 	listint_t *new_node;
+	listint_t *node = malloc(sizeof(listint_t));
 	unsigned int x;
 
-	if (node == NULL || head == NULL)
+	if (!node || !head)
 		return (NULL);
+
 	node->n = n;
 	node->next = NULL;
 
-	if (idx == NULL)
+	if (idx == 0)
 	{
 		node->next = *head;
 		*head = node;
@@ -31,18 +32,17 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 
 	new_node = *head;
-	while (head)
+	while (new_node)
 	{
 		if (x == idx - 1)
 		{
-			node->next = new_node->next;
-			new_node->next = node;
-			return (node);
+		node->next = new_node->next;
+		new_node->next = node;
+		return (node);
 		}
-			x++;
-			new_node = new_node->next;
+		x++;
+		new_node = new_node->next;
 	}
 	free(node);
 	return (NULL);
-
 }

@@ -1,0 +1,24 @@
+le (head)
+		if (x == idx - 1)
+			}
+			node->next = new_node->next;
+			new_node->next = node;
+			return (node);
+			}
+			x++;
+			new_node = new_node->next;
+		}
+free(node);
+return (NULL);
+le (head)
+		if (x == idx - 1)
+			}
+			node->next = new_node->next;
+			new_node->next = node;
+			return (node);
+			}
+			x++;
+			new_node = new_node->next;
+		}
+free(node);
+return (NULL);
