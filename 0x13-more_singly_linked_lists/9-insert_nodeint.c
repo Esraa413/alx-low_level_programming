@@ -18,7 +18,7 @@ unsigned int x;
 	listint_t *node = malloc(sizeof(listint_t));
 	listint_t *new_node; 
 
-	if (new == null || head == NULL)
+	if (new == NULL || head == NULL)
 		return (NULL);
 
 	node->n = n;
