@@ -15,9 +15,9 @@ unsigned int binary_to_uint(const char *b)
 	if (!b)
 		return (0);
 
-	while (x)
+	while (b[x])
 	{
-	if (b[x] < '0' || b[x] > '1')
+		if (b[x] < '0' || b[x] > '1')
 			return (0);
 		val = 2 * val + (b[x++] - '0');
 	}
