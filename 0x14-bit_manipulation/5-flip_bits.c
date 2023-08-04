@@ -18,7 +18,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	for (num = 63; num >= 0; num--)
 	{
-		if (cur & 1ul)
+		if (cur & 1)
 			count++;
 		cur  = bit_num >> num;
 	}
