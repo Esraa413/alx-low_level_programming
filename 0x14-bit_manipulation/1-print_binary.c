@@ -8,15 +8,14 @@
 
 void print_binary(unsigned long int n)
 {
-	int num = 63;
+	int num = sizeof(n) * 8;
 	int count = 0;
 	unsigned long int cur;
 
 	while (num)
 	{
-		cur = n >> num;
 
-		if (cur & 1 << --num)
+		if (cur & 1L << --num)
 		{
 			_putchar('1');
 			count++;
