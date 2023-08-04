@@ -20,7 +20,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	{
 		if (cur & 1)
 			count++;
-		cur  = bit_num >> num;
+		cur = bit_num >> num;
 	}
 	return (count);
 }
