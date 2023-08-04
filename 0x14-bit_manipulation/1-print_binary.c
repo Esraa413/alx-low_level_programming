@@ -10,7 +10,6 @@ void print_binary(unsigned long int n)
 {
 	int num = sizeof(n) * 8;
 	int count = 0;
-	unsigned long int cur;
 
 	while (num)
 	{
