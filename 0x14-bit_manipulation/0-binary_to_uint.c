@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 
-/*
+/**
  * binary_to_uint-that converts a binary number
  * @b:s pointing to a string of 0 and 1 chars
  * Return: the converted number, or 0
