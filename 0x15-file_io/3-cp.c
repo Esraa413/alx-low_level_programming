@@ -31,10 +31,11 @@ char *create_buffer(char *file)
  * @argv: array of pointers
  *
  * Return: Always 0.
+ *
  * Description: If the argument count - exit code 97.
  * If file_from does not exist or cannot - exit code 98.
- *  If file_to cannot be created -  exit code 99.
- *  If file_to or file_from cannot - exit code 100.
+ * If file_to cannot be created -  exit code 99.
+ * If file_to or file_from cannot - exit code 100.
  */
 
 int main(int argc, char *argv[])
@@ -67,7 +68,7 @@ int main(int argc, char *argv[])
 				"ERROR: Can't close file_to %d\n", file_to), exit(100);
 	if (close(file_from) == -1)
 		dprintf(STDERR_FILENO,
-				"ERROR: Can't close file_from %d\n", file_to), exit(100);
+				"ERROR: Can't close file_from %d\n", file_from), exit(100);
 
 	return (0);
 }
