@@ -66,6 +66,7 @@ int main(int argc, char *argv[])
 	if (byt == -1)
 		dprintf(STDERR_FILENO,
 				"Error: Can't read from file %s\n", argv[1]), exit(98);
+	free(buffer);
 	end1 = close(fd_from);
 	if (end1 == -1)
 		dprintf(STDERR_FILENO,
