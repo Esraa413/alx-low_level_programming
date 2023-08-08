@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 	int fd_from = 0;
 	int fd_to = 0;
 	int end1, end2;
-	int byt;
+	ssize_t byt;
 	char buffer[1024];
 
 	if (argc != 3)
