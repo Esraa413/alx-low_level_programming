@@ -1,6 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+char *create_buf(char *file);
+
+/**
+ * create_buf - Allocates 1024 bytes
+ * @file: The name of the file buffer
+ * Return: Always 0
+ */
+
+char *create_buffer(char *file)
+{
+	char *buffer;
+	buffer = malloc(sizeof(char) * 1024);
+	if (buffer == 0)
+	{
+		dprintf(STDERR_FILENO,
+				"Error: Can't write to %s\n", file);
+		exit(99);
+	}
+
+	return (buffer);
+
+}
 
 /**
  * main - program that copies the content of a file to another file
@@ -8,6 +30,10 @@
  * @argv: array of pointers
  *
  * Return: Always 0.
+ * Description: If the argument count - exit code 97.
+ * If file_from does not exist or cannot - exit code 98.
+ *  If file_to cannot be created -  exit code 99.
+ *  If file_to or file_from cannot - exit code 100.
  */
 
 int main(int argc, char *argv[])
@@ -15,7 +41,7 @@ int main(int argc, char *argv[])
 	int file_from = 0;
 	int file_to = 0;
 	ssize_t byt;
-	char buf[READ_BUF_SIZE];
+	char *buffer;
 
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: copy file_from file_to\n"), exit(97);
@@ -27,8 +53,8 @@ int main(int argc, char *argv[])
 	if (file_from == -1)
 		dprintf(STDERR_FILENO,
 				"Error: Can't write to %s\n", argv[2]), exit(99);
-	while ((byt = read(file_from, buf, READ_BUF_SIZE)) > 0)
-		if (write(file_to, buf, byt) != byt)
+	while ((byt = read(file_from, buffer, 1024)) > 0)
+		if (write(file_to, buffer, byt) != byt)
 			dprintf(STDERR_FILENO,
 					"Error: Can't write to %s\n", argv[2]), exit(99);
 	if (byt == -1)
