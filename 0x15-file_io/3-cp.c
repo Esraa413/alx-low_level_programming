@@ -69,14 +69,12 @@ int main(int argc, char *argv[])
 	if (byt == -1)
 		dprintf(STDERR_FILENO,
 				"Error: Can't read from file %s\n", argv[1]), exit(98);
-	file_from = close(file_from);
-	file_to = close(file_to);
-	if (file_from)
+	if (close(file_to) == -1)
 		dprintf(STDERR_FILENO,
-				"ERROR: Can't close file_from %d\n", file_from), exit(100);
-	if (file_to)
+				"ERROR: Can't close file_to %d\n", file_to), exit(100);
+	if (close(file_from) == -1)
 		dprintf(STDERR_FILENO,
-				"ERROR: Can't close file_from %d\n", file_from), exit(100);
+				"ERROR: Can't close file_from %d\n", file_to), exit(100);
 
 	return (1);
 }
