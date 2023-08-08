@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
 {
 	int file_from = 0;
 	int file_to = 0;
+	int end1, end2;
 	ssize_t byt;
 	char buffer[1024];
 
@@ -62,12 +63,14 @@ int main(int argc, char *argv[])
 	if (byt == -1)
 		dprintf(STDERR_FILENO,
 				"Error: Can't read from file %s\n", argv[1]), exit(98);
-	if (close(file_to) == -1)
+	end1 = close(file_from);
+	if (end1 == -1)
 		dprintf(STDERR_FILENO,
-				"ERROR: Can't close file_to %d\n", file_to), exit(100);
-	if (close(file_from) == -1)
+				"ERROR: Can't close file_to %d\n", file_from), exit(100);
+	end2 = close(file_to)
+	if (end2 == -1)
 		dprintf(STDERR_FILENO,
-				"ERROR: Can't close file_from %d\n", file_from), exit(100);
+				"ERROR: Can't close file_from %d\n", file_to), exit(100);
 
 	return (0);
 }
