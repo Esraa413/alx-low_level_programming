@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 {
 	int file_from = 0;
 	int file_to = 0;
-	ssize_t byt, b;
+	ssize_t byt;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -51,20 +51,13 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO,
 				"Error: Can't read from file %s\n", argv[1]), exit(98);
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (file_from == -1)
-		dprintf(STDERR_FILENO,
-				"Error: Can't write to %s\n", argv[2]), exit(99);
-	byt = 1024;
-	while (byt == 1024)
+
+	while ((byt = read(file_from, buffer, 1024)) > 0)
 	{
-		byt = read(file_from, buffer, 1024);
-		if (byt == -1)
-			dprintf(STDERR_FILENO,
-					"Error: Can't read from file %s\n", argv[1]), exit(98);
-		b = write(file_to, buffer, file_from);
-		if (b == -1)
-			dprintf(STDERR_FILENO,
-					"Error: Can't read from file %s\n", argv[2]), exit(99);
+		if (file_to < 0 || (write(file_to, buffer, byt) != byt))
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+		}
 	}
 	if (byt == -1)
 		dprintf(STDERR_FILENO,
@@ -76,5 +69,5 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO,
 				"ERROR: Can't close file_from %d\n", file_to), exit(100);
 
-	return (1);
+	return (0);
 }
