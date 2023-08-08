@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
-char *create_buf(char *file);
+char *create_buffer(char *file);
 
 /**
  * create_buf - Allocates 1024 bytes
