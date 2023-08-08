@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+
 char *create_buffer(char *file);
 
 /**
@@ -11,17 +12,17 @@ char *create_buffer(char *file);
 
 char *create_buffer(char *file)
 {
-	char *buffer;
+        char *buffer;
 
-	buffer = malloc(sizeof(char) * 1024);
-	if (buffer == 0)
-	{
-		dprintf(STDERR_FILENO,
-				"Error: Can't write to %s\n", file);
-		exit(99);
-	}
+        buffer = malloc(sizeof(char) * 1024);
+        if (buffer == 0)
+        {
+                dprintf(STDERR_FILENO,
+                                "Error: Can't write to %s\n", file);
+                exit(99);
+        }
 
-	return (buffer);
+        return (buffer);
 
 }
 
@@ -41,8 +42,8 @@ int main(int argc, char *argv[])
 {
 	int file_from = 0;
 	int file_to = 0;
-	ssize_t byt;
-	char *buffer;
+	ssize_t byt,b;
+	char buffer[1024];
 
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: copy file_from file_to\n"), exit(97);
@@ -54,10 +55,18 @@ int main(int argc, char *argv[])
 	if (file_from == -1)
 		dprintf(STDERR_FILENO,
 				"Error: Can't write to %s\n", argv[2]), exit(99);
-	while ((byt = read(file_from, buffer, 1024)) > 0)
-		if (write(file_to, buffer, byt) != byt)
+	byt = 1024;
+	while (byt == 1024)
+	{
+		byt= read(file_from, buffer, 1024);
+		if (byt == -1)
 			dprintf(STDERR_FILENO,
-					"Error: Can't write to %s\n", argv[2]), exit(99);
+					"Error: Can't read from file %s\n", argv[1]), exit(98);
+		b = write(file_to, buffer, file_from);
+		if (b == -1)
+			dprintf(STDERR_FILENO,
+					"Error: Can't read from file %s\n", argv[2]), exit(99);
+	}
 	if (byt == -1)
 		dprintf(STDERR_FILENO,
 				"Error: Can't read from file %s\n", argv[1]), exit(98);
