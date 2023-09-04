@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
 	}
 	if (byt == -1)
 		dprintf(STDERR_FILENO,
-				"ERROR: Can't close fd %d\n", fd_from), exit(100);
+				"ERROR: Can't close fd %d\n", fd_to), exit(100);
 	end1 = close(fd_from);
 	if (end1 == -1)
 		dprintf(STDERR_FILENO,
