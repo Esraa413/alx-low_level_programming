@@ -22,13 +22,14 @@ int binary_search(int *array, size_t size, int value)
 	for (left = 0; right = size - 1; right >= left)
 	{
 		printf("Searching in array: ");
-		x = left
+		x = left;
 		while (x < right)
 		{
 			printf("%d, ", array[x]);
 			x++;
 		}
 		printf("%d\n", array[x]);
+
 		x = left + (right - left) / 2;
 		if (array[x] == value)
 			return (x);
