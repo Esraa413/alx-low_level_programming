@@ -1,4 +1,4 @@
-#include "search_algos.h" 
+#include "search_algos.h"
 
 /**
  * _binary_search - Searches for value in sorted array
@@ -41,13 +41,13 @@ int _binary_search(int *array, size_t left, size_t right, int value)
 }
 
 /**
-  * exponental_search - Searches for value in sorted array
-  * @array: pointer to first element of array to search.
-  * @size: number of elements in array.
-  * @value: value to search for.
-  *
-  * Return: Always EXIT_SUCCESS
-  */
+ * exponential_search - Searches for value in sorted array
+ * @array: pointer to first element of array to search.
+ * @size: number of elements in array.
+ * @value: value to search for.
+ *
+ * Return: Always EXIT_SUCCESS
+ */
 
 int exponential_search(int *array, size_t size, int value)
 {
