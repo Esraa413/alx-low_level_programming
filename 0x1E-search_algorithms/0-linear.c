@@ -2,28 +2,26 @@
 
 /**
  * linear_search - Searches a value in an array using a linear search.
- * @array: The array to search in.
- * @size: The length of the array.
- * @value: The value to look for.
+ * @array: array to search in.
+ * @size: length of the array.
+ * @value: value to look for.
  *
- * Return: The first index of the value in the array, otherwise -1.
+ * Return: Always EXIT_SUCCESS
  */
 
 int linear_search(int *array, size_t size, int value)
 {
-	size_t i;
+	size_t x;
 
-	for (i = 0; (i < size) && (array); i++)
+	if (!array || size == 0)
+		return (-1);
+
+	for (x = 0; x < size; x++)
 	{
-		if (*(array + i) == value)
-		{
-			printf("Value checked array[%d] = [%d]\n", (int)i, *(array + i));
-			return (i);
-		}
-		else
-		{
-			printf("Value checked array[%d] = [%d]\n", (int)i, *(array + i));
-		}
+		printf("Value checked array[%lu] = [%d]\n", x, array[x]);
+		if (array[x] == value)
+			return (x);
 	}
+
 	return (-1);
 }
