@@ -25,6 +25,7 @@ typedef struct listint_s
  * @n: integar number
  * @index: Index of the nodein list
  * @next: the Pointer to the next node
+ * @express: Pointer to the next node in the express
  *
  */
 
